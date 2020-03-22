@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+    loterioma_game_debugger:
+        build: .docker/static-server
+        container_name: loterioma_game_debugger
+        stdin_open: true
+        tty: true
+        ports:
+          - 9903:80
+        volumes:
+          - ./app:/usr/share/nginx/html
+        networks:
+          - proxynet
+
+networks:
+    proxynet:
+        name: loterioma-net
