@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Loterioma-game-debugger">
+    <meta name="author" content="RaspberryVision">
+
+    <title>Loterioma Game Debugger</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Loterioma Game Debugger</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="debugger.html">Debugger</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-md-12 mb-2 mt-2">
+
+                <div class="bs-example">
+                    <h1 class="border-bottom pb-3 mb-4 mt-4">Debug request</h1>
+                    <form id="debugger-request-form" class="needs-validation">
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="gameHash">Game hash:</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="gameHash" class="form-control" id="gameHash" placeholder="Game hash" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="client">Client:</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="client" class="form-control" id="client" placeholder="Client" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="userHash">User hash:</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="userHash" class="form-control" id="userHash" placeholder="User hash" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="mode">Mode:</label>
+                            <div class="col-sm-9">
+                                <select name="mode" id="mode" class="form-control">
+                                    <option value="0">Live</option>
+                                    <option value="1">Dev</option>
+                                    <option value="2">Debug</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="engine">Engine:</label>
+                            <div class="col-sm-9">
+                                <select name="engine" id="engine" class="form-control">
+                                    <option value="0">Slots</option>
+                                    <option value="1">Dice</option>
+                                    <option value="2">Roulette</option>
+                                    <option value="3">Lottery</option>
+                                    <option value="4">Cards game</option>
+                                    <option value="4">Sports</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="params">Parameters:</label>
+                            <div class="col-sm-9">
+                                <textarea rows="3" class="form-control" id="params" name="params" placeholder="Parameters" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-9 offset-sm-3">
+                                <div class="btn btn-primary" id="send-request-btn">Submit</div>
+                                <input type="reset" class="btn btn-secondary" value="Reset">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="game-debugger.js"></script>
+
+</body>
+
+</html>
