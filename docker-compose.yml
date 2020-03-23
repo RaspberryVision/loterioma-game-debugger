@@ -10,8 +10,9 @@ services:
         volumes:
           - ./app:/usr/share/nginx/html
         networks:
-          - proxynet
+          - my-proxy-net
 
 networks:
-    proxynet:
+    my-proxy-net:
+        external: true
         name: loterioma-net
